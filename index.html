@@ -1,43 +1,4 @@
-
-<style>
-.code-wrap{position:relative;background:var(--color-background-secondary);border-radius:12px;border:0.5px solid var(--color-border-tertiary);padding:1rem}
-.code-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
-.code-title{font-size:14px;font-weight:500;color:var(--color-text-primary)}
-.copy-btn{height:36px;padding:0 14px;border-radius:8px;border:0.5px solid var(--color-border-secondary);background:var(--color-background-primary);color:var(--color-text-primary);font-size:13px;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:6px}
-.copy-btn i{font-size:16px}
-.copy-btn:active{transform:scale(0.97)}
-pre{font-size:11px;color:var(--color-text-secondary);overflow-x:auto;white-space:pre;line-height:1.5;max-height:200px;overflow-y:auto;border-radius:6px}
-.steps{margin-top:14px}
-.step{display:flex;gap:10px;padding:10px 0;border-bottom:0.5px solid var(--color-border-tertiary);align-items:flex-start}
-.step:last-child{border-bottom:none}
-.step-num{width:24px;height:24px;border-radius:50%;background:var(--color-background-info);color:var(--color-text-info);font-size:12px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.step-text{font-size:14px;color:var(--color-text-primary);line-height:1.5}
-.step-text code{background:var(--color-background-secondary);padding:1px 5px;border-radius:4px;font-size:12px;font-family:monospace}
-.copied{color:var(--color-text-success)!important;border-color:var(--color-border-success)!important}
-</style>
-
-<h2 class="sr-only">Shopping list app HTML file and GitHub Pages setup instructions</h2>
-
-<div class="code-wrap">
-  <div class="code-top">
-    <span class="code-title"><i class="ti ti-file-code" style="font-size:16px;vertical-align:-2px;margin-right:6px" aria-hidden="true"></i>shopping-list.html</span>
-    <button class="copy-btn" id="copybtn" onclick="copyCode()"><i class="ti ti-copy" aria-hidden="true"></i>Copy all</button>
-  </div>
-  <pre id="code-preview">Full mobile-optimized app — click "Copy all" to get the complete file</pre>
-</div>
-
-<div class="steps">
-  <div style="font-size:13px;font-weight:500;color:var(--color-text-secondary);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em">GitHub Pages setup</div>
-  <div class="step"><div class="step-num">1</div><div class="step-text">Copy the code and save it as <code>index.html</code> on your computer</div></div>
-  <div class="step"><div class="step-num">2</div><div class="step-text">Go to <strong>github.com</strong> → New repository → name it e.g. <code>shopping-list</code>, set to Public</div></div>
-  <div class="step"><div class="step-num">3</div><div class="step-text">Upload <code>index.html</code> via the "Add file" button in the repo</div></div>
-  <div class="step"><div class="step-num">4</div><div class="step-text">Go to <strong>Settings → Pages</strong> → Source: Deploy from branch → Branch: <code>main</code> → Save</div></div>
-  <div class="step"><div class="step-num">5</div><div class="step-text">Your URL will be <code>yourusername.github.io/shopping-list</code> — open in Safari on your phone</div></div>
-  <div class="step"><div class="step-num">6</div><div class="step-text">In Safari: tap the <strong>Share</strong> icon → <strong>Add to Home Screen</strong> → done, it works like an app</div></div>
-</div>
-
-<script>
-const html = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -49,8 +10,25 @@ const html = `<!DOCTYPE html>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#fff;--bg2:#f5f5f0;--bg3:#e8e8e4;--tx:#1a1a18;--tx2:#6b6b68;--tx3:#a0a09e;--bd:rgba(0,0,0,0.1);--bd2:rgba(0,0,0,0.18);--gbg:#EAF3DE;--gtx:#27500A;--gbd:#639922;--bbg:#E6F1FB;--btx:#0C447C;--bbd:#378ADD;--rbg:#FCEBEB;--rtx:#791F1F;--rbd:#A32D2D;--nh:68px;--sb:env(safe-area-inset-bottom,0px);--st:env(safe-area-inset-top,0px)}
-@media(prefers-color-scheme:dark){:root{--bg:#1c1c1e;--bg2:#2c2c2e;--bg3:#3a3a3c;--tx:#f2f2f0;--tx2:#a0a09e;--tx3:#6b6b68;--bd:rgba(255,255,255,0.1);--bd2:rgba(255,255,255,0.18);--gbg:#173404;--gtx:#C0DD97;--gbd:#3B6D11;--bbg:#042C53;--btx:#B5D4F4;--bbd:#185FA5;--rbg:#501313;--rtx:#F7C1C1;--rbd:#A32D2D}}
+:root{
+  --bg:#fff;--bg2:#f5f5f0;--bg3:#e8e8e4;
+  --tx:#1a1a18;--tx2:#6b6b68;--tx3:#a0a09e;
+  --bd:rgba(0,0,0,0.1);--bd2:rgba(0,0,0,0.18);
+  --gbg:#EAF3DE;--gtx:#27500A;--gbd:#639922;
+  --bbg:#E6F1FB;--btx:#0C447C;--bbd:#378ADD;
+  --rbg:#FCEBEB;--rtx:#791F1F;--rbd:#A32D2D;
+  --nh:68px;
+  --sb:env(safe-area-inset-bottom,0px);
+  --st:env(safe-area-inset-top,0px)
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#1c1c1e;--bg2:#2c2c2e;--bg3:#3a3a3c;
+  --tx:#f2f2f0;--tx2:#a0a09e;--tx3:#6b6b68;
+  --bd:rgba(255,255,255,0.1);--bd2:rgba(255,255,255,0.18);
+  --gbg:#173404;--gtx:#C0DD97;--gbd:#3B6D11;
+  --bbg:#042C53;--btx:#B5D4F4;--bbd:#185FA5;
+  --rbg:#501313;--rtx:#F7C1C1;--rbd:#A32D2D
+}}
 html,body{height:100%;background:var(--bg2);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;-webkit-tap-highlight-color:transparent;overscroll-behavior:none}
 #app{display:flex;flex-direction:column;height:100%;max-width:480px;margin:0 auto;background:var(--bg2)}
 .hd{background:var(--bg);border-bottom:0.5px solid var(--bd);padding:14px 16px 12px;padding-top:calc(14px + var(--st));flex-shrink:0}
@@ -61,7 +39,7 @@ html,body{height:100%;background:var(--bg2);color:var(--tx);font-family:-apple-s
 .nb{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;cursor:pointer;padding:6px 0;color:var(--tx3);font-size:11px;font-family:inherit;-webkit-tap-highlight-color:transparent}
 .nb i{font-size:24px}
 .nb.ac{color:var(--tx)}
-.cd{background:var(--bg);border-radius:12px;border:0.5px solid var(--bd);margin-bottom:10px;overflow:hidden}
+.card{background:var(--bg);border-radius:12px;border:0.5px solid var(--bd);margin-bottom:10px;overflow:hidden}
 .ch{display:flex;align-items:center;padding:14px 16px;cursor:pointer;user-select:none;gap:10px;min-height:62px;-webkit-tap-highlight-color:transparent}
 .ci{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
 .cn{font-size:15px;font-weight:500;color:var(--tx)}
@@ -75,8 +53,8 @@ html,body{height:100%;background:var(--bg2);color:var(--tx);font-family:-apple-s
 .cb i{font-size:17px;color:transparent}
 .cb.on{background:var(--gbg);border-color:var(--gbd)}
 .cb.on i{color:var(--gtx)}
-.in{flex:1;font-size:16px;color:var(--tx);line-height:1.3}
-.in.dk{color:var(--tx3);text-decoration:line-through}
+.inm{flex:1;font-size:16px;color:var(--tx);line-height:1.3}
+.inm.dk{color:var(--tx3);text-decoration:line-through}
 .db{width:40px;height:40px;border-radius:50%;border:none;background:none;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--tx3);font-size:20px;flex-shrink:0;-webkit-tap-highlight-color:transparent}
 .ai{display:flex;align-items:center;padding:8px 12px;gap:8px;border-top:0.5px solid var(--bd);background:var(--bg2)}
 .ai input{flex:1;height:44px;border:0.5px solid var(--bd2);border-radius:8px;background:var(--bg);color:var(--tx);font-size:15px;padding:0 12px;font-family:inherit;-webkit-appearance:none}
@@ -95,7 +73,7 @@ html,body{height:100%;background:var(--bg2);color:var(--tx);font-family:-apple-s
 .mo{background:var(--bg);border-radius:20px 20px 0 0;width:100%;max-width:480px;max-height:88vh;display:flex;flex-direction:column;padding-bottom:calc(16px + var(--sb))}
 .mh{width:36px;height:4px;background:var(--bd2);border-radius:2px;margin:10px auto 0;flex-shrink:0}
 .mhd{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 10px;flex-shrink:0;border-bottom:0.5px solid var(--bd)}
-.mt{font-size:17px;font-weight:600;color:var(--tx)}
+.mttl{font-size:17px;font-weight:600;color:var(--tx)}
 .mb{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .mf{padding:12px 16px 0;display:flex;gap:10px;flex-shrink:0}
 .mf .bt{flex:1;height:50px;font-size:15px}
@@ -104,20 +82,23 @@ html,body{height:100%;background:var(--bg2);color:var(--tx);font-family:-apple-s
 .mc{width:28px;height:28px;border-radius:6px;border:2px solid var(--bd2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:transparent}
 .mc.on{background:var(--bbg);border-color:var(--bbd);color:var(--btx)}
 .ml{flex:1;font-size:16px;color:var(--tx)}
-.mr2{display:flex;align-items:center;padding:14px 16px;gap:12px;background:var(--bg);border-bottom:0.5px solid var(--bd);min-height:56px}
-.mr2:last-child{border-bottom:none}
+.mrow{display:flex;align-items:center;padding:14px 16px;gap:12px;background:var(--bg);border-bottom:0.5px solid var(--bd);min-height:56px}
+.mrow:last-child{border-bottom:none}
 .sl{font-size:12px;font-weight:500;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;padding:0 4px;margin:16px 0 6px}
-.ir2{display:flex;gap:8px;margin-bottom:10px}
-.ir2 input{flex:1;height:48px;border:0.5px solid var(--bd2);border-radius:8px;background:var(--bg);color:var(--tx);font-size:15px;padding:0 12px;font-family:inherit;-webkit-appearance:none}
-.ir2 input:focus{outline:none;border-color:var(--bbd)}
-.ir2 .bt{height:48px;padding:0 18px}
+.inrow{display:flex;gap:8px;margin-bottom:10px}
+.inrow input{flex:1;height:48px;border:0.5px solid var(--bd2);border-radius:8px;background:var(--bg);color:var(--tx);font-size:15px;padding:0 12px;font-family:inherit;-webkit-appearance:none}
+.inrow input:focus{outline:none;border-color:var(--bbd)}
+.inrow .bt{height:48px;padding:0 18px}
 .em{text-align:center;padding:40px 20px;color:var(--tx3);font-size:15px}
 .em i{font-size:42px;display:block;margin-bottom:10px}
 </style>
 </head>
 <body>
 <div id="app">
-  <div class="hd"><h1 id="ptit">Shopping list</h1><div class="hs" id="psub"></div></div>
+  <div class="hd">
+    <h1 id="ptit">Shopping list</h1>
+    <div class="hs" id="psub"></div>
+  </div>
   <div class="ct" id="ct"></div>
   <nav class="bn">
     <button class="nb ac" id="nav-list" onclick="setTab('list')"><i class="ti ti-shopping-cart"></i>List</button>
@@ -127,56 +108,289 @@ html,body{height:100%;background:var(--bg2);color:var(--tx);font-family:-apple-s
 </div>
 <div id="mr"></div>
 <script>
-const IC={c1:{i:'ti-leaf',bg:'#EAF3DE',fg:'#27500A'},c2:{i:'ti-meat',bg:'#FAECE7',fg:'#712B13'},c3:{i:'ti-bottle',bg:'#E6F1FB',fg:'#0C447C'},c4:{i:'ti-bread',bg:'#FAEEDA',fg:'#633806'},c5:{i:'ti-cup',bg:'#E1F5EE',fg:'#085041'},c6:{i:'ti-candy',bg:'#FBEAF0',fg:'#72243E'},c7:{i:'ti-box',bg:'#F1EFE8',fg:'#444441'}};
+const IC={
+  c1:{i:'ti-leaf',bg:'#EAF3DE',fg:'#27500A'},
+  c2:{i:'ti-meat',bg:'#FAECE7',fg:'#712B13'},
+  c3:{i:'ti-bottle',bg:'#E6F1FB',fg:'#0C447C'},
+  c4:{i:'ti-bread',bg:'#FAEEDA',fg:'#633806'},
+  c5:{i:'ti-cup',bg:'#E1F5EE',fg:'#085041'},
+  c6:{i:'ti-candy',bg:'#FBEAF0',fg:'#72243E'},
+  c7:{i:'ti-box',bg:'#F1EFE8',fg:'#444441'}
+};
 function cs(id){return IC[id]||{i:'ti-tag',bg:'#F1EFE8',fg:'#444441'}}
+
 const K='slv3';
-function df(){return{categories:[{id:'c1',name:'Fruits & Veggies'},{id:'c2',name:'Meat & Fish'},{id:'c3',name:'Dairy & Eggs'},{id:'c4',name:'Bread & Bakery'},{id:'c5',name:'Drinks'},{id:'c6',name:'Candy & Snacks'},{id:'c7',name:'Other'}],items:[{id:'i1',name:'Apples',catId:'c1',checked:false},{id:'i2',name:'Chicken breast',catId:'c2',checked:false},{id:'i3',name:'Milk',catId:'c3',checked:false},{id:'i4',name:'Pasta',catId:'c7',checked:false},{id:'i5',name:'Tomatoes',catId:'c1',checked:false},{id:'i6',name:'Cheese',catId:'c3',checked:false}],recipes:[{id:'r1',name:'Pasta Bolognese',ingredients:['i4','i2','i5']},{id:'r2',name:'Caprese Salad',ingredients:['i5','i6']}],col:{}}}
-let S;try{S=JSON.parse(localStorage.getItem(K))||df()}catch(e){S=df()}
+function df(){
+  return{
+    categories:[
+      {id:'c1',name:'Fruits & Veggies'},
+      {id:'c2',name:'Meat & Fish'},
+      {id:'c3',name:'Dairy & Eggs'},
+      {id:'c4',name:'Bread & Bakery'},
+      {id:'c5',name:'Drinks'},
+      {id:'c6',name:'Candy & Snacks'},
+      {id:'c7',name:'Other'}
+    ],
+    items:[
+      {id:'i1',name:'Apples',catId:'c1',checked:false},
+      {id:'i2',name:'Chicken breast',catId:'c2',checked:false},
+      {id:'i3',name:'Milk',catId:'c3',checked:false},
+      {id:'i4',name:'Pasta',catId:'c7',checked:false},
+      {id:'i5',name:'Tomatoes',catId:'c1',checked:false},
+      {id:'i6',name:'Cheese',catId:'c3',checked:false}
+    ],
+    recipes:[
+      {id:'r1',name:'Pasta Bolognese',ingredients:['i4','i2','i5']},
+      {id:'r2',name:'Caprese Salad',ingredients:['i5','i6']}
+    ],
+    col:{}
+  }
+}
+
+let S;
+try{S=JSON.parse(localStorage.getItem(K))||df()}catch(e){S=df()}
 if(!S.col)S.col={};
+
 function sv(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
 function uid(){return 'x'+Math.random().toString(36).slice(2,9)}
+
 let tab='list';
-function setTab(t){tab=t;['list','recipes','manage'].forEach(n=>{document.getElementById('nav-'+n).classList.toggle('ac',n===t)});render()}
-function render(){const ts={list:'Shopping list',recipes:'Recipes',manage:'Manage'};document.getElementById('ptit').textContent=ts[tab];if(tab==='list')rl();else if(tab==='recipes')rr();else rm()}
-function rl(){const{categories:cats,items}=S;document.getElementById('psub').textContent=items.filter(i=>i.checked).length+' of '+items.length+' checked';let h='';cats.forEach(cat=>{const ci=items.filter(i=>i.catId===cat.id);if(!ci.length)return;const s=cs(cat.id);const dc=ci.filter(i=>i.checked).length;const col=S.col[cat.id];h+='<div class="cd"><div class="ch" onclick="tcat(\''+cat.id+'\')"><div class="ci" style="background:'+s.bg+';color:'+s.fg+'"><i class="ti '+s.i+'"></i></div><div><div class="cn">'+cat.name+'</div><div class="cc">'+dc+' of '+ci.length+'</div></div><i class="ti ti-chevron-down cv '+(col?'':'op')+'"></i></div>';if(!col){h+='<div class="il">';ci.forEach(item=>{h+='<div class="ir"><button class="cb '+(item.checked?'on':'')+'" onclick="ti(\''+item.id+'\')"><i class="ti ti-check"></i></button><span class="in '+(item.checked?'dk':'')+'">'+item.name+'</span><button class="db" onclick="ri(\''+item.id+'\')"><i class="ti ti-x"></i></button></div>'});h+='<div class="ai"><input type="text" placeholder="Add to '+cat.name+'\\u2026" id="ai-'+cat.id+'" onkeydown="if(event.key===\'Enter\')aic(\''+cat.id+'\')"/><button class="ib" onclick="aic(\''+cat.id+'\')"><i class="ti ti-plus"></i></button></div></div>'}h+='</div>'});if(!items.length)h='<div class="em"><i class="ti ti-shopping-cart"></i>List is empty</div>';document.getElementById('ct').innerHTML=h}
+
+function setTab(t){
+  tab=t;
+  ['list','recipes','manage'].forEach(n=>{
+    document.getElementById('nav-'+n).classList.toggle('ac',n===t)
+  });
+  render();
+}
+
+function render(){
+  const ts={list:'Shopping list',recipes:'Recipes',manage:'Manage'};
+  document.getElementById('ptit').textContent=ts[tab];
+  if(tab==='list')rl();
+  else if(tab==='recipes')rr();
+  else rm();
+}
+
+// ---- LIST ----
+function rl(){
+  const{categories:cats,items}=S;
+  document.getElementById('psub').textContent=
+    items.filter(i=>i.checked).length+' of '+items.length+' checked';
+  let h='';
+  cats.forEach(cat=>{
+    const ci=items.filter(i=>i.catId===cat.id);
+    if(!ci.length)return;
+    const s=cs(cat.id);
+    const dc=ci.filter(i=>i.checked).length;
+    const col=S.col[cat.id];
+    h+='<div class="card">';
+    h+='<div class="ch" onclick="tcat(\''+cat.id+'\')">';
+    h+='<div class="ci" style="background:'+s.bg+';color:'+s.fg+'"><i class="ti '+s.i+'"></i></div>';
+    h+='<div><div class="cn">'+cat.name+'</div><div class="cc">'+dc+' of '+ci.length+'</div></div>';
+    h+='<i class="ti ti-chevron-down cv '+(col?'':'op')+'"></i>';
+    h+='</div>';
+    if(!col){
+      h+='<div class="il">';
+      ci.forEach(item=>{
+        h+='<div class="ir">';
+        h+='<button class="cb '+(item.checked?'on':'')+'" onclick="ti(\''+item.id+'\')"><i class="ti ti-check"></i></button>';
+        h+='<span class="inm '+(item.checked?'dk':'')+'">'+item.name+'</span>';
+        h+='<button class="db" onclick="ri(\''+item.id+'\')"><i class="ti ti-x"></i></button>';
+        h+='</div>';
+      });
+      h+='<div class="ai">';
+      h+='<input type="text" placeholder="Add to '+cat.name+'..." id="ai-'+cat.id+'" onkeydown="if(event.key===\'Enter\')aic(\''+cat.id+'\')" />';
+      h+='<button class="ib" onclick="aic(\''+cat.id+'\')"><i class="ti ti-plus"></i></button>';
+      h+='</div>';
+      h+='</div>';
+    }
+    h+='</div>';
+  });
+  if(!items.length)h='<div class="em"><i class="ti ti-shopping-cart"></i>List is empty</div>';
+  document.getElementById('ct').innerHTML=h;
+}
+
 function tcat(id){S.col[id]=!S.col[id];sv();rl()}
 function ti(id){const it=S.items.find(i=>i.id===id);if(it)it.checked=!it.checked;sv();rl()}
 function ri(id){S.items=S.items.filter(i=>i.id!==id);sv();rl()}
-function aic(cid){const el=document.getElementById('ai-'+cid);const nm=el.value.trim();if(!nm)return;S.items.push({id:uid(),name:nm,catId:cid,checked:false});el.value='';sv();rl()}
-function rr(){const{recipes,items}=S;document.getElementById('psub').textContent=recipes.length+' recipe'+(recipes.length!==1?'s':'');let h='<div class="ir2"><input type="text" id="nr" placeholder="New recipe name\\u2026" onkeydown="if(event.key===\'Enter\')ar()"/><button class="bt pr" onclick="ar()"><i class="ti ti-plus"></i>Add</button></div>';if(!recipes.length)h+='<div class="em"><i class="ti ti-soup"></i>No recipes yet</div>';recipes.forEach(r=>{const ings=r.ingredients.map(id=>items.find(i=>i.id===id)?.name).filter(Boolean);h+='<div class="rc"><div class="rt">'+r.name+'</div><div class="ri">'+(ings.length?ings.join(', '):'No ingredients yet')+'</div><div class="ra"><button class="bt" onclick="oim(\''+r.id+'\')"><i class="ti ti-pencil"></i>Edit</button><button class="bt pr" onclick="ocm(\''+r.id+'\')"><i class="ti ti-basket"></i>Add to list</button><button class="bt dr" onclick="drec(\''+r.id+'\')"><i class="ti ti-trash"></i></button></div></div>'});document.getElementById('ct').innerHTML=h}
-function ar(){const el=document.getElementById('nr');const nm=el.value.trim();if(!nm)return;S.recipes.push({id:uid(),name:nm,ingredients:[]});el.value='';sv();rr()}
+function aic(cid){
+  const el=document.getElementById('ai-'+cid);
+  const nm=el.value.trim();
+  if(!nm)return;
+  S.items.push({id:uid(),name:nm,catId:cid,checked:false});
+  el.value='';sv();rl();
+}
+
+// ---- RECIPES ----
+function rr(){
+  const{recipes,items}=S;
+  document.getElementById('psub').textContent=
+    recipes.length+' recipe'+(recipes.length!==1?'s':'');
+  let h='<div class="inrow"><input type="text" id="nr" placeholder="New recipe name..." onkeydown="if(event.key===\'Enter\')ar()"/>';
+  h+='<button class="bt pr" onclick="ar()"><i class="ti ti-plus"></i>Add</button></div>';
+  if(!recipes.length)h+='<div class="em"><i class="ti ti-soup"></i>No recipes yet</div>';
+  recipes.forEach(r=>{
+    const ings=r.ingredients.map(id=>items.find(i=>i.id===id)?.name).filter(Boolean);
+    h+='<div class="rc">';
+    h+='<div class="rt">'+r.name+'</div>';
+    h+='<div class="ri">'+(ings.length?ings.join(', '):'No ingredients yet')+'</div>';
+    h+='<div class="ra">';
+    h+='<button class="bt" onclick="oim(\''+r.id+'\')"><i class="ti ti-pencil"></i>Edit</button>';
+    h+='<button class="bt pr" onclick="ocm(\''+r.id+'\')"><i class="ti ti-basket"></i>Add to list</button>';
+    h+='<button class="bt dr" onclick="drec(\''+r.id+'\')"><i class="ti ti-trash"></i></button>';
+    h+='</div></div>';
+  });
+  document.getElementById('ct').innerHTML=h;
+}
+
+function ar(){
+  const el=document.getElementById('nr');
+  const nm=el.value.trim();
+  if(!nm)return;
+  S.recipes.push({id:uid(),name:nm,ingredients:[]});
+  el.value='';sv();rr();
+}
 function drec(id){S.recipes=S.recipes.filter(r=>r.id!==id);sv();rr()}
-function oim(rid){const r=S.recipes.find(x=>x.id===rid);const{items,categories}=S;let b='';categories.forEach(cat=>{const ci=items.filter(i=>i.catId===cat.id);if(!ci.length)return;b+='<div style="padding:10px 16px 4px;font-size:12px;font-weight:500;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em">'+cat.name+'</div>';ci.forEach(item=>{const on=r.ingredients.includes(item.id);b+='<div class="mi" onclick="tig(\''+rid+'\',\''+item.id+'\')"><div class="mc '+(on?'on':'')+'" id="ic-'+item.id+'">'+(on?'<i class="ti ti-check"></i>':'')+'</div><span class="ml">'+item.name+'</span></div>'})});sm('Ingredients: '+r.name,b,[{l:'Done',c:'pr',fn:'cm()'}])}
-function tig(rid,iid){const r=S.recipes.find(x=>x.id===rid);if(!r)return;if(r.ingredients.includes(iid))r.ingredients=r.ingredients.filter(i=>i!==iid);else r.ingredients.push(iid);sv();const el=document.getElementById('ic-'+iid);if(el){const on=r.ingredients.includes(iid);el.classList.toggle('on',on);el.innerHTML=on?'<i class="ti ti-check"></i>':''}}
-function ocm(rid){const r=S.recipes.find(x=>x.id===rid);const ings=r.ingredients.map(id=>S.items.find(i=>i.id===id)).filter(Boolean);if(!ings.length){alert('Add ingredients to this recipe first.');return}let b='<div style="padding:12px 16px 6px;font-size:14px;color:var(--tx2)">Check what you already have \\u2014 the rest gets added to your list.</div>';ings.forEach(item=>{b+='<div class="mi" onclick="thv(\''+item.id+'\')"><div class="mc" id="hv-'+item.id+'"></div><span class="ml">'+item.name+'</span></div>'});sm(r.name,b,[{l:'Cancel',c:'',fn:'cm()'},{l:'Add missing to list',c:'pr',fn:"am('"+rid+"')"}])}
-function thv(id){const el=document.getElementById('hv-'+id);if(!el)return;const on=el.classList.toggle('on');el.innerHTML=on?'<i class="ti ti-check"></i>':''}
-function am(rid){const r=S.recipes.find(x=>x.id===rid);r.ingredients.forEach(iid=>{const el=document.getElementById('hv-'+iid);if(!(el&&el.classList.contains('on'))){const it=S.items.find(i=>i.id===iid);if(it)it.checked=false}});sv();cm();setTab('list')}
-function rm(){document.getElementById('psub').textContent='Reorder & add categories';let h='<div class="sl">Store sections</div><div class="cd" id="cl">';S.categories.forEach(cat=>{const s=cs(cat.id);h+='<div class="mr2" draggable="true" ondragstart="ds(event,\''+cat.id+'\')" ondragover="dv(event,\''+cat.id+'\')" ondrop="dd(event,\''+cat.id+'\')"><i class="ti ti-grip-vertical" style="font-size:22px;color:var(--tx3)"></i><div class="ci" style="background:'+s.bg+';color:'+s.fg+';width:30px;height:30px;font-size:15px;border-radius:6px"><i class="ti '+s.i+'"></i></div><span style="flex:1;font-size:16px;color:var(--tx)">'+cat.name+'</span><button class="db" onclick="rcat(\''+cat.id+'\')"><i class="ti ti-x"></i></button></div>'});h+='</div><div class="sl">Add category</div><div class="ir2"><input type="text" id="nc" placeholder="Category name\\u2026" onkeydown="if(event.key===\'Enter\')ac()"/><button class="bt pr" onclick="ac()"><i class="ti ti-plus"></i>Add</button></div><div class="sl">Actions</div><div class="cd"><div class="mr2" style="cursor:pointer" onclick="uall()"><i class="ti ti-refresh" style="font-size:22px;color:var(--tx2)"></i><span style="flex:1;font-size:16px;color:var(--tx)">Uncheck all items</span><i class="ti ti-chevron-right" style="color:var(--tx3)"></i></div></div>';document.getElementById('ct').innerHTML=h}
-function ac(){const el=document.getElementById('nc');const nm=el.value.trim();if(!nm)return;S.categories.push({id:uid(),name:nm});el.value='';sv();rm()}
-function rcat(id){if(S.items.some(i=>i.catId===id)){alert('Remove items in this category first.');return}S.categories=S.categories.filter(c=>c.id!==id);sv();rm()}
+
+function oim(rid){
+  const r=S.recipes.find(x=>x.id===rid);
+  const{items,categories}=S;
+  let b='';
+  categories.forEach(cat=>{
+    const ci=items.filter(i=>i.catId===cat.id);
+    if(!ci.length)return;
+    b+='<div style="padding:10px 16px 4px;font-size:12px;font-weight:500;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em">'+cat.name+'</div>';
+    ci.forEach(item=>{
+      const on=r.ingredients.includes(item.id);
+      b+='<div class="mi" onclick="tig(\''+rid+'\',\''+item.id+'\')">';
+      b+='<div class="mc '+(on?'on':'')+'" id="ic-'+item.id+'">'+(on?'<i class="ti ti-check"></i>':'')+'</div>';
+      b+='<span class="ml">'+item.name+'</span>';
+      b+='</div>';
+    });
+  });
+  sm('Ingredients: '+r.name,b,[{l:'Done',c:'pr',fn:'cm()'}]);
+}
+
+function tig(rid,iid){
+  const r=S.recipes.find(x=>x.id===rid);
+  if(!r)return;
+  if(r.ingredients.includes(iid))r.ingredients=r.ingredients.filter(i=>i!==iid);
+  else r.ingredients.push(iid);
+  sv();
+  const el=document.getElementById('ic-'+iid);
+  if(el){
+    const on=r.ingredients.includes(iid);
+    el.classList.toggle('on',on);
+    el.innerHTML=on?'<i class="ti ti-check"></i>':'';
+  }
+}
+
+function ocm(rid){
+  const r=S.recipes.find(x=>x.id===rid);
+  const ings=r.ingredients.map(id=>S.items.find(i=>i.id===id)).filter(Boolean);
+  if(!ings.length){alert('Add ingredients to this recipe first.');return}
+  let b='<div style="padding:12px 16px 6px;font-size:14px;color:var(--tx2)">Check what you already have — the rest gets added to your list.</div>';
+  ings.forEach(item=>{
+    b+='<div class="mi" onclick="thv(\''+item.id+'\')">';
+    b+='<div class="mc" id="hv-'+item.id+'"></div>';
+    b+='<span class="ml">'+item.name+'</span>';
+    b+='</div>';
+  });
+  sm(r.name,b,[{l:'Cancel',c:'',fn:'cm()'},{l:'Add missing to list',c:'pr',fn:"am('"+rid+"')"}]);
+}
+
+function thv(id){
+  const el=document.getElementById('hv-'+id);
+  if(!el)return;
+  const on=el.classList.toggle('on');
+  el.innerHTML=on?'<i class="ti ti-check"></i>':'';
+}
+
+function am(rid){
+  const r=S.recipes.find(x=>x.id===rid);
+  r.ingredients.forEach(iid=>{
+    const el=document.getElementById('hv-'+iid);
+    if(!(el&&el.classList.contains('on'))){
+      const it=S.items.find(i=>i.id===iid);
+      if(it)it.checked=false;
+    }
+  });
+  sv();cm();setTab('list');
+}
+
+// ---- MANAGE ----
+function rm(){
+  document.getElementById('psub').textContent='Reorder & add categories';
+  let h='<div class="sl">Store sections</div><div class="card" id="cl">';
+  S.categories.forEach(cat=>{
+    const s=cs(cat.id);
+    h+='<div class="mrow" draggable="true" ondragstart="ds(event,\''+cat.id+'\')" ondragover="dv(event,\''+cat.id+'\')" ondrop="dd(event,\''+cat.id+'\')">';
+    h+='<i class="ti ti-grip-vertical" style="font-size:22px;color:var(--tx3)"></i>';
+    h+='<div class="ci" style="background:'+s.bg+';color:'+s.fg+';width:30px;height:30px;font-size:15px;border-radius:6px"><i class="ti '+s.i+'"></i></div>';
+    h+='<span style="flex:1;font-size:16px;color:var(--tx)">'+cat.name+'</span>';
+    h+='<button class="db" onclick="rcat(\''+cat.id+'\')"><i class="ti ti-x"></i></button>';
+    h+='</div>';
+  });
+  h+='</div>';
+  h+='<div class="sl">Add category</div>';
+  h+='<div class="inrow"><input type="text" id="nc" placeholder="Category name..." onkeydown="if(event.key===\'Enter\')ac()"/>';
+  h+='<button class="bt pr" onclick="ac()"><i class="ti ti-plus"></i>Add</button></div>';
+  h+='<div class="sl">Actions</div>';
+  h+='<div class="card"><div class="mrow" style="cursor:pointer" onclick="uall()">';
+  h+='<i class="ti ti-refresh" style="font-size:22px;color:var(--tx2)"></i>';
+  h+='<span style="flex:1;font-size:16px;color:var(--tx)">Uncheck all items</span>';
+  h+='<i class="ti ti-chevron-right" style="color:var(--tx3)"></i>';
+  h+='</div></div>';
+  document.getElementById('ct').innerHTML=h;
+}
+
+function ac(){
+  const el=document.getElementById('nc');
+  const nm=el.value.trim();
+  if(!nm)return;
+  S.categories.push({id:uid(),name:nm});
+  el.value='';sv();rm();
+}
+function rcat(id){
+  if(S.items.some(i=>i.catId===id)){
+    alert('Remove items in this category first.');return;
+  }
+  S.categories=S.categories.filter(c=>c.id!==id);
+  sv();rm();
+}
 function uall(){S.items.forEach(i=>i.checked=false);sv();render()}
+
 let dsrc=null;
 function ds(e,id){dsrc=id;e.dataTransfer.effectAllowed='move'}
 function dv(e,id){e.preventDefault();e.dataTransfer.dropEffect='move'}
-function dd(e,id){e.stopPropagation();if(dsrc===id)return;const c=S.categories;const a=c.findIndex(x=>x.id===dsrc);const b=c.findIndex(x=>x.id===id);const[m]=c.splice(a,1);c.splice(b,0,m);sv();rm()}
-function sm(title,bhtml,btns){const bh=btns.map(b=>'<button class="bt '+b.c+'" onclick="'+b.fn+'">'+b.l+'</button>').join('');document.getElementById('mr').innerHTML='<div class="mw" onclick="if(event.target===this)cm()"><div class="mo"><div class="mh"></div><div class="mhd"><span class="mt">'+title+'</span><button class="db" onclick="cm()"><i class="ti ti-x"></i></button></div><div class="mb">'+bhtml+'</div><div class="mf">'+bh+'</div></div></div>'}
-function cm(){document.getElementById('mr').innerHTML='';if(tab==='recipes')rr()}
-render();
-<\/script>
-</body>
-</html>`;
-
-document.getElementById('code-preview').textContent = html.slice(0, 300) + '\n\n... (' + html.length + ' characters total)';
-
-function copyCode() {
-  navigator.clipboard.writeText(html).then(() => {
-    const btn = document.getElementById('copybtn');
-    btn.classList.add('copied');
-    btn.innerHTML = '<i class="ti ti-check"></i>Copied!';
-    setTimeout(() => {
-      btn.classList.remove('copied');
-      btn.innerHTML = '<i class="ti ti-copy"></i>Copy all';
-    }, 2000);
-  });
+function dd(e,id){
+  e.stopPropagation();
+  if(dsrc===id)return;
+  const c=S.categories;
+  const a=c.findIndex(x=>x.id===dsrc);
+  const b=c.findIndex(x=>x.id===id);
+  const[m]=c.splice(a,1);
+  c.splice(b,0,m);
+  sv();rm();
 }
+
+// ---- MODAL ----
+function sm(title,bhtml,btns){
+  const bh=btns.map(b=>'<button class="bt '+b.c+'" onclick="'+b.fn+'">'+b.l+'</button>').join('');
+  document.getElementById('mr').innerHTML=
+    '<div class="mw" onclick="if(event.target===this)cm()">'
+    +'<div class="mo">'
+    +'<div class="mh"></div>'
+    +'<div class="mhd"><span class="mttl">'+title+'</span>'
+    +'<button class="db" onclick="cm()"><i class="ti ti-x"></i></button></div>'
+    +'<div class="mb">'+bhtml+'</div>'
+    +'<div class="mf">'+bh+'</div>'
+    +'</div></div>';
+}
+function cm(){document.getElementById('mr').innerHTML='';if(tab==='recipes')rr()}
+
+render();
 </script>
+</body>
+</html>
